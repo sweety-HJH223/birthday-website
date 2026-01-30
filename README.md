@@ -1,6 +1,6 @@
 # 🎉 Interactive Birthday Website
 
-This is a fun and interactive birthday website** built with **HTML, CSS, and Vanilla JavaScript**. 
+This is a fun and interactive birthday website built with **HTML, CSS, and Vanilla JavaScript**. 
 It showcases animations, sounds, and user interactions to create a playful experience.  
 > Note: This project was created as a personal gift for **정환씨**, combining creativity, animation, and interactivity.
 
