@@ -1,0 +1,269 @@
+body{
+        margin: 0px;
+        padding: 0;
+        background:url(./assets/background.jpg);
+        text-align:center;
+        background-size:cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        image-rendering: auto;  
+    }
+
+    /* Cake Button */
+#cake-btn {
+  position: fixed;
+  bottom: 200px;
+  right: 200px;
+  font-size: 100px;
+  cursor: pointer;
+ background: rgba(171, 20, 20, 0.7); 
+  color: hsl(315, 81%, 35%);
+  padding: 10px 14px;
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+#cake-btn:hover {
+  transform: scale(1.1);
+  background: rgba(169, 9, 103, 0.8);
+}
+
+/* Message Box */
+#message-box {
+  position: fixed;
+  bottom: 360px;
+  right: 250px;
+  width: 270px;
+  padding: 16px;
+  background: rgba(46, 0, 32, 0.75);
+  color: rgb(177, 231, 52);
+  border-radius: 12px;
+  font-family: cursive;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Typing text */
+#typing-text {
+  display: inline;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Blinking cursor */
+#cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Confetti container */
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* Single confetti piece */
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  opacity: 0.9;
+  animation: confetti-fall linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+    .balloon_container {
+        position: relative;
+         bottom: -800px; 
+    }
+    .balloon :before {
+        content:"triangle";
+        font-size :20px;
+        color: hsl(215, 30%,50%);
+        display: block;
+        text-align: center;
+        width:100%;
+        position:absolute;
+        bottom: -12px;
+        z-index: -100;
+    }
+.balloon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 100px;
+
+  border-radius: 50% 50% 45% 45%;
+  color: white;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 32px;
+
+  cursor: pointer;
+  box-shadow: inset -8px -8px 0 rgba(255, 255, 255, 0.15);
+}
+ .balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.2);
+}
+.balloon::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 1.5px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateX(-50%);
+}
+.balloon span {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 12px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+}
+
+    .balloon1 {
+        animation: balloons1 forwards;
+        font-size: 58px;
+       }
+       .balloon2 {
+        animation: balloons2 forwards;
+        font-size: 48px;
+        top: -94px;
+       }
+       .balloon3 {
+        animation: balloons3 forwards;
+        font-size: 38px;
+        bottom: 187px;
+       }
+
+       .balloon4 {
+        animation: balloons4 forwards;
+        font-size: 28px;
+        bottom: 280px;
+       }
+       
+       @keyframes balloons1 {
+        0%{transform: translate(10vh) rotate3d(1,1,1,90deg) ; opacity: 1 ;}
+        10%{transform : translateY(-60vh) rotate3d(1,1,1,180deg); opacity: 1;}
+        100%{transform : translateY(-800px) rotate3d(1,1,1,360deg) ; opacity: 1;}
+        
+       }
+         @keyframes balloons2 {
+        0%{transform: translateY(10vh) rotate(360deg);  opacity: 1;}
+        10%{transform: translateY(-10vh) rotate(180deg);  opacity: 1;}
+        100%{transform: translateY(-700px) rotate(0deg);  opacity: 1;}
+        
+       }
+       @keyframes balloons3 {
+        0%{transform: translateY(10vh) rotate(360deg);  opacity: 1;}
+        10%{transform: translateY(-10vh) rotate(180deg);  opacity: 1;}
+        100%{transform: translateY(-600px) rotate(0deg);  opacity: 1;}
+        
+       }
+
+       @keyframes balloons4 {
+        0%{transform: translateY(10vh) rotate(360deg);  opacity: 1;}
+        10%{transform: translateY(-60vh) rotate(180deg);  opacity: 1;}
+        100%{transform: translateY(-500px) rotate(0deg);  opacity: 1;}
+        
+       }
+
+     .balloon1:nth-child(1){ background:rgba(255,100,100); animation-duration:3.0s; left:53px;}
+     .balloon:nth-child(1):before{color:rgba(255,100,100);} 
+
+     .balloon1:nth-child(2){ background:rgba(128, 100, 255); animation-duration:4.1s; left:37px;}
+     .balloon:nth-child(2):before{color:rgba(128, 100, 255);} 
+
+     .balloon1:nth-child(3){ background:rgba(255,255,255); animation-duration:5.2s; left:27px; color:black;}
+     .balloon:nth-child(3):before{color:rgba(255,255,255);} 
+
+     .balloon1:nth-child(4){ background:rgba(0,255,255); animation-duration:6.3s; left:14px;}
+     .balloon:nth-child(4):before{color:rgba(0,255,255);}
+
+     .balloon1:nth-child(5){ background:rgba(0,0,255); animation-duration:4.4s; left:4px;}
+     .balloon:nth-child(5):before{color:rgba(0,0,255);}
+
+     .balloon2:nth-child(1){ background:rgb(83, 3, 83); animation-duration:3s; left:61px;}
+     .balloon2:nth-child(1):before{color:rgba(83, 3, 83);}
+
+     .balloon2:nth-child(2){ background:rgb(122, 18, 18); animation-duration:3.1s; left:39px;}
+     .balloon2:nth-child(2):before{color:rgba(122, 18, 18);}
+
+     .balloon2:nth-child(3){ background:rgb(44, 116, 138); animation-duration:5.2s; left:22px; color: black;}
+     .balloon2:nth-child(3):before{color:rgba(44, 116, 138);}
+
+     .balloon2:nth-child(4){ background:rgb(42, 68, 68); animation-duration:6.3s;}
+     .balloon2:nth-child(4):before{color:rgba();}
+
+     .balloon2:nth-child(5){ background:rgba(236, 104, 16, 0.836); animation-duration:4.4s; left:-13px;}
+     .balloon2:nth-child(5):before{color:rgba(236, 104, 16, 0.836);}
+
+     .balloon3:nth-child(1){ background:rgb(41, 185, 84); animation-duration:6s; left:36px;}
+     .balloon3:nth-child(1):before{color:rgba(41, 185, 84);}
+
+     
+     .balloon3:nth-child(2){ background:rgb(226, 3, 107); animation-duration:3.1s; left:25px; }
+     .balloon3:nth-child(2):before{color:rgba(226, 3, 107);}
+
+     
+     .balloon3:nth-child(3){ background:rgb(0, 0, 119); animation-duration:5.2s; left:22px; color: black;}
+     .balloon3:nth-child(3):before{color:rgba(0, 0, 119);}
+
+     .balloon4:nth-child(1){ background:rgba(116, 6, 6); animation-duration:6s; left:13px;}
+     .balloon4:nth-child(1):before{color:rgb(116, 6, 6);}
+
+     
+     .balloon4:nth-child(2){ background:rgb(128, 100, 255); animation-duration:3.1s; left:18px; }
+     .balloon4:nth-child(2):before{color:rgba(128,100,255);}
+
+     
+     .balloon4:nth-child(3){ background:rgba(225,225,255); animation-duration:5.2s; left:20px; color: black;}
+     .balloon4:nth-child(3):before{color:rgba(225,225,255);}
+
+     .balloon:hover{
+        display: none;
+     }
